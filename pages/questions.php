@@ -24,7 +24,7 @@ if (!$_SESSION["isConnected"]) {
                         <br>
                         <?php foreach ($db->select("reponses", array("questions_id" => $question["id"])) as $choice)  : ?>
                             <li>
-                                <input type="radio" name="choice-<?php echo($question["libelle"]); ?>[]"
+                                <input type="radio" name="choice[<?php echo($question["id"]); ?>]"
                                        value="<?php echo($choice["id"]); ?>">
                                 <?php echo($choice["libelle"]); ?>
                             </li>
